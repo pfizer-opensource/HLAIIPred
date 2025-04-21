@@ -20,7 +20,7 @@ class HLAIIPredict(object):
     This class gets a protein sequence and using a sliding window returns a heatmap and corresponding
     evaluation metrics.
     """
-    def __init__(self, model_root, fold_idx, device):
+    def __init__(self, model_root, fold_idx, device, mhc2_root=None):
         
         self.device = device
         settings_path = os.path.join(model_root, 'config.yaml')
@@ -43,9 +43,10 @@ class HLAIIPredict(object):
         self.model.eval()
 
         # allele meta
-        root = "."
-        self.alpha_dict = OrderedDict([(f.id, str(f.seq)) for f in list(SeqIO.parse(os.path.join(root, "mhcII/DRA_DPA_DQA_pseudosequence.fasta"), 'fasta'))])
-        self.beta_dict = OrderedDict([(f.id, str(f.seq)) for f in list(SeqIO.parse(os.path.join(root, "mhcII/DRB_DPB_DQB_pseudosequence.fasta"), 'fasta'))])
+        if mhc2_root is None:
+            mhc2_root = "."
+        self.alpha_dict = OrderedDict([(f.id, str(f.seq)) for f in list(SeqIO.parse(os.path.join(mhc2_root, "DRA_DPA_DQA_pseudosequence.fasta"), 'fasta'))])
+        self.beta_dict = OrderedDict([(f.id, str(f.seq)) for f in list(SeqIO.parse(os.path.join(mhc2_root, "DRB_DPB_DQB_pseudosequence.fasta"), 'fasta'))])
 
 
     def prepare_input(self, peptides, alleles):
