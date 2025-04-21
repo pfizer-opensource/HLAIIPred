@@ -1,0 +1,39 @@
+* The Strazar benchmark is derived from the reported data in the following publication:
+https://www.sciencedirect.com/science/article/pii/S1074761323002261?via%3Dihub#app2
+
+@article{Strazar2023,
+title = {HLA-II immunopeptidome profiling and deep learning reveal features of antigenicity to inform antigen discovery},
+journal = {Immunity},
+volume = {56},
+number = {7},
+pages = {1681-1698.e13},
+year = {2023},
+issn = {1074-7613},
+doi = {https://doi.org/10.1016/j.immuni.2023.05.009},
+url = {https://www.sciencedirect.com/science/article/pii/S1074761323002261},
+author = {Martin Stražar and Jihye Park and Jennifer G. Abelin and Hannah B. Taylor and Thomas K. Pedersen and Damian R. Plichta and Eric M. Brown and Basak Eraslan and Yuan-Mao Hung and Kayla Ortiz and Karl R. Clauser and Steven A. Carr and Ramnik J. Xavier and Daniel B. Graham},
+keywords = {CD4 T cells, antigen presentation, immunopeptidomics, MHC class II, protein sequence models, microbiome antigens, SARS-CoV-2 antigens},
+}
+
+
+
+
+* The ADA benchmark is acquired and curated based on the data from the following work:
+https://www.tandfonline.com/doi/full/10.1080/19420862.2021.2020203
+https://github.com/Merck/BioPhi
+
+@article{Marks2021,
+    author = {Marks, Claire and Hummer, Alissa M and Chin, Mark and Deane, Charlotte M},
+    title = "{Humanization of antibodies using a machine learning approach on large-scale repertoire data}",
+    journal = {Bioinformatics},
+    volume = {37},
+    number = {22},
+    pages = {4041-4047},
+    year = {2021},
+    month = {06},
+    abstract = "{Monoclonal antibody (mAb) therapeutics are often produced from non-human sources (typically murine), and can therefore generate immunogenic responses in humans. Humanization procedures aim to produce antibody therapeutics that do not elicit an immune response and are safe for human use, without impacting efficacy. Humanization is normally carried out in a largely trial-and-error experimental process. We have built machine learning classifiers that can discriminate between human and non-human antibody variable domain sequences using the large amount of repertoire data now available.Our classifiers consistently outperform the current best-in-class model for distinguishing human from murine sequences, and our output scores exhibit a negative relationship with the experimental immunogenicity of existing antibody therapeutics. We used our classifiers to develop a novel, computational humanization tool, Hu-mAb, that suggests mutations to an input sequence to reduce its immunogenicity. For a set of therapeutic antibodies with known precursor sequences, the mutations suggested by Hu-mAb show substantial overlap with those deduced experimentally. Hu-mAb is therefore an effective replacement for trial-and-error humanization experiments, producing similar results in a fraction of the time.Hu-mAb (humanness scoring and humanization) is freely available to use at opig.stats.ox.ac.uk/webapps/humab.Supplementary data are available at Bioinformatics online.}",
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btab434},
+    url = {https://doi.org/10.1093/bioinformatics/btab434},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/37/22/4041/50335362/btab434.pdf},
+}
