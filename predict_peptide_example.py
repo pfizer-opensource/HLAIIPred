@@ -21,6 +21,7 @@ def load_dummy_data(alleles='9common'):
 ############################################
 
 model_root = 'models'
+mhc2_root = 'mhcII'
 device = torch.device('cpu')  # cpu or cuda:0
 out_root = 'predictions/'
 alleles = '9common'
@@ -35,7 +36,7 @@ df = pd.DataFrame()
 df['peptide'] = peptides
 
 for model_idx in range(2):
-    predictor = HLAIIPredict(model_root, model_idx, device)
+    predictor = HLAIIPredict(model_root, model_idx, device,mhc2_root)
     inputs = predictor.prepare_input(peptides, alleles)
     y_pred, scores = predictor.predict(inputs, batch_size=300, sigmoid=True)
     # np.save(os.path.join(out_root, 'model_%i_pred.npy'%(model_idx)), y_pred)   # y_pred: the best score among all 9mers and alleles
