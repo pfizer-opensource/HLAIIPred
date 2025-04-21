@@ -1,0 +1,29 @@
+model:
+  allele_block_size: 35
+  allele_pdrop: 0.5
+  attn_pdrop: 0.1
+  embd_pdrop: 0.1
+  kernel_size: 9
+  n_embd: 128
+  n_heads: 8
+  n_layer: 8
+  output_pdrop: 0.1
+  pep_block_size: 30
+  resid_pdrop: 0.1
+  select_kmer: max
+  vocab_size: 25
+training:
+  batch_size: 200
+  ckpt_path: out_wcd_alpdrop.5/epT_0.pt
+  device: 0
+  history_path: out_wcd_alpdrop.5/epT_hist_0.pkl
+  learning_rate: 0.0001
+  lr_decay:
+  - plateau
+  - min
+  - 5
+  - 1
+  - 0.7
+  - 1.0e-08
+  max_epochs: 100
+  num_workers: 0

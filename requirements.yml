@@ -1,0 +1,18 @@
+name: hlapred
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - scipy
+  - numpy
+  - pandas
+  - tqdm
+  - yaml
+  - biopython
+  - pip
+  - pip:
+      - torch
+      - torchvision
+      - torchaudio
+      - pyyaml
