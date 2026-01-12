@@ -1,6 +1,9 @@
 # HLAIIPred
 Cross-Attention Mechanism for Modeling the Interaction of HLA Class II Molecules with Peptides.
+
 Preprint: https://www.biorxiv.org/content/10.1101/2024.10.01.616078v1
+
+Peer-reviewed Publication: https://www.nature.com/articles/s42003-025-08500-2
 
 ## Abstract 
 We introduce HLAIIPred, a deep learning model to predict peptides presented by class II human leukocyte antigens (HLAII) on the surface of antigen presenting cells. HLAIIPred is trained using a Transformer-based neural network and a dataset comprising of HLAII-presented peptides identified by mass spectrometry. In addition to predicting peptide presentation, the model can also provide important insights into peptide-HLAII interactions by identifying core peptide residues that form such interactions. We evaluate the performance of HLAIIPred on three different tasks, peptide presentation in monoallelic samples, immunogenicity prediction of therapeutic antibodies, and neoantigen prioritization for cancer immunotherapy. Additionally, we created a new dataset of biotherapeutics HLAII peptides presented by human dendritic cells. This data is used to develop screening strategies to predict the unwanted immunogenic segments of therapeutic antibodies by HLAII presentation models. HLAIIPred demonstrates superior or equivalent performance when compared to the latest models across all evaluated benchmark datasets. We achieve a 16% increase in prediction of presented peptides compared to the second-best model on a set of unseen peptides presented by less frequent alleles. The model also improves the area under the precision-recall curve by 3% for distinguishing between immunogenic and non-immunogenic antibodies. We show that HLAIIPred can identify epitopes in therapeutic antibodies and prioritize neoantigens with high accuracy.
@@ -67,6 +70,6 @@ Coming soon.
 
 # Citation
 
-If you use this tool in your research, please cite the following preprint:
+If you use this tool in your research, please cite the following publication:
 
-[https://www.biorxiv.org/content/10.1101/2024.10.01.616078v1](https://www.biorxiv.org/content/10.1101/2024.10.01.616078v1)
+[https://www.nature.com/articles/s42003-025-08500-2](https://www.nature.com/articles/s42003-025-08500-2)
